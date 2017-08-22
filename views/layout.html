@@ -1,0 +1,18 @@
+{% set logoPath = "http://interactive.ftchinese.com/bower_components/ftc-logos/dist" if flags.production else "/bower_components/ftc-logos/dist" %} {#<!-- nunjucks的if inline expression -->#}
+
+<!doctype html>
+<html lang="zh-Hans" class="core" data-buildtime="{{ now() | isotime }}" data-content-id="{{ id if id else test_comments_uuid }}">{# <!-- isotime作为filter在render.js中添加给了env --> #}
+  <head>
+    {% include "partials/meta.html" %}
+    {% if flags.production %}
+      {% include "partials/analytics.html" %}
+    {% endif %}
+    <script inline src="scripts/ad.js"></script>
+    {#<!--待弄懂： inline属性是个啥？？求查-->#}
+  </head>
+  <body>
+    {% include "partials/header.html" %}
+    {% include "partials/ad-banner.html" %}
+
+  </body>
+</html>
