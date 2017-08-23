@@ -1,0 +1,93 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preconnect" href="https://cdn.polyfill.io">{#<!--
+预连接链接关系类型用于指示将用于获取所需资源的原点 疑问：还是不太明白它的作用-->#}
+
+{# Critical JS and CSS #}
+<script inline src="components/core/top.js"></script>
+
+<link inline rel="stylesheet" href="components/core/top.css">
+<link rel="stylesheet" href="https://origami-build.ft.com/v2/bundles/css?modules=n-normalize@^1,o-fonts@^2">
+<link rel="stylesheet" href="https://origami-build.ft.com/v2/bundles/css?modules=o-grid@^4.2.1,o-card@^2.1.8">
+
+{# This project's style #}
+<link inline rel="stylesheet" href="styles/styles.css">
+
+{%- if stylesheets %}
+  {% for stylesheet in stylesheets %}
+  <link rel="stylesheet" href="{{ stylesheet | safe }}">
+    {# <!-- 
+      Nunjucks builtin filter: safe
+      将值标记为安全，这意味着在具有自动转义的环境中，该变量将不会被转义。
+    -->#}
+  {% endfor %}
+{% endif -%}
+
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="index,follow">
+<meta name="copyright" content="FT中文网">
+<meta name="theme-color" content="#fff1e0" />
+
+<script type="application/ld+json"> {# 一种MINE类型,这是什么MINE类型，只见过"application/json"，没见过 ld+json，疑问：此处设置这一段有何用？#}
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "FT中文网",
+  "alternateName": "FTChinese.com",
+  "url": "http://www.ftchinese.com"
+}
+</script>
+
+{%- if topic.name and topic.url -%}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "{{ topic.url }}",
+      "name": "{{ topic.name }}",
+      "image": ""
+    }
+  }]
+}
+</script>
+{%- endif -%}
+
+<title>{{ title | default(headline, true) }}- FT中文网</title> 
+{# <!-- 
+  Nunjucks builtin Filter:default(value,default,[Boolean])
+  If value is strictly undefined, return default, otherwise value. If boolean is true, any JavaScript falsy value(如false,"") will return default 
+-->#}
+
+<meta name="description" content="{{ description }}">
+
+<meta property="og:title" content="测验：你有多了解你的国家？- FT中文网">
+
+<meta property="og:description" content="{{ description }}">
+
+<meta property="og:image" content="{{ facebookImage | default(socialImage) | default(mainImage.url) }}">
+
+<meta property="og:url" content="{{ url }}">
+
+<link rel="canonical" href="{{ url }}">
+
+<link rel="image_src" href="{{ mainImage.url }}">
+
+<meta name="twitter:card" content="{{ twitterCard }}">
+<meta name="twitter:site" content="@FTChinese">
+
+<meta name="twitter:title" content="测验：你有多了解你的国家？- FT中文网">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ twitterImage | default(socialImage) | default(mainImage.url) }}">
+<meta name="twitter:url" content="{{ url }}">
+
+<link rel="apple-touch-icon" sizes="180x180" href="{{logoPath}}/favicons/apple-touch-icon-180x180.png">
+<link rel="apple-touch-icon" sizes="152x152" href="{{logoPath}}/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="120x120" href="{{logoPath}}/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="{{logoPath}}/favicons/apple-touch-icon-76x76.png">
+<link href="{{logoPath}}/favicons/favicon.ico" type="image/x-icon" rel="shortcut icon" />
