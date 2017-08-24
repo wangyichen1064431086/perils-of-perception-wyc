@@ -67,3 +67,36 @@
 		}
 	}
 }
+
+@import 'components/core/main';
+@import 'components/question/main';
+@import 'components/question-inputs/range/main';
+@import 'components/question-outputs/main';
+@import 'components/question-outputs/area-chart/main';
+@import 'components/question-outputs/column-chart/main';
+@import 'components/overlay/main';
+@import 'components/ad/banner';
+
+div.results {
+  h2 {
+    margin-top: 0;
+  }
+  button {
+    display: block;
+    width: 100%;
+    max-width: 315px;
+    margin: 38px auto 0;
+  }
+}
+
+$o-footer-is-silent: false;
+@import 'ftc-footer/main';
+
+$social-images-base-url: "http://interactive.ftchinese.com/bower_components/ftc-social-images/dist";
+
+@import 'ftc-share/main';
+@include oShare(('light'));
+.o-share {
+	display: block;
+	text-align: right;
+}

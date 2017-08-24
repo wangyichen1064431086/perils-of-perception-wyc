@@ -28,10 +28,11 @@ gulp.task('dev', function(done) {
 
 gulp.task('build-pages',() => {
   return co(function *() {
+
     const destDir = '.tmp';
 
     try {
-      yield mkdir(destDir)
+      yield mkdir(destDir);
     } catch (e) {
       console.log(e);
     }
@@ -39,7 +40,6 @@ gulp.task('build-pages',() => {
     const flags =  {
       production: process.env.NODE_ENV === 'prod'
     };
-
     const article = yield fs.readFile('./data/article.json', 'utf8');
 
     const context = Object.assign( 
@@ -50,13 +50,11 @@ gulp.task('build-pages',() => {
         footer
       }
     );
-
     const html = yield render('index.html',context);
 
     const outputFile = (process.env.NODE_ENV === 'prod') ? `${path.basename(__dirname)}.html`:'index.html';//如果为prod模式，则输出为perils-of-perception_wyc.html，否则为index.html
 
     yield fs.writeFile(`${destDir}/${outputFile}`,html,'utf8');
-
   })
   .then(function() {
     browserSync.reload('*.html');
@@ -71,7 +69,7 @@ gulp.task('styles', () => {
   const sassOptions = {
     outputStyle:'expanded',
     precision: 10,
-    includePath: ['bower_components']
+    includePaths: ['bower_components']
   };
 
   if(process.env.NODE_ENV === 'prod') {

@@ -1,0 +1,17 @@
+div.question {
+  opacity: 0.62;
+  pointer-events: none;
+  transition: opacity linear 200ms;
+  &.active,
+  &.answered {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .o-typography-lead--small {
+    font-family: sans-serif;
+    line-height: 24px;
+    font-size: 19px;
+    font-weight: 400;
+    margin: 0;
+  }
+}

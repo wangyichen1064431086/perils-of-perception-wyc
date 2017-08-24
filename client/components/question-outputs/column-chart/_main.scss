@@ -1,0 +1,166 @@
+$axis-color: #c3bcb0;
+$tick-label-color: #6b6e68;
+$distribution-color: #cec6b9;
+$user-color: #26747a;
+$actual-color: #09a25c;
+$country-color: #ff7f8a;
+
+svg.column-chart {
+  align-self: flex-start;
+  margin-top: 7px;
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: $axis-color;
+    stroke-width: 2;
+    shape-rendering: crispEdges;
+  }
+  .y.axis {
+    path {
+       stroke: none;
+     }
+    .tick line {
+      stroke-width: 1;
+      stroke-dasharray: 1, 2;
+    }
+  }
+  .x2.axis {
+    path {
+      stroke: none;
+    }
+    .tick {
+      line {
+        stroke-width: 2;
+      }
+      &.user line {
+        stroke: $user-color;
+        stroke-dasharray: 2, 2;
+      }
+      &.actual line {
+        stroke: $actual-color;
+        stroke-dasharray: 2, 2;
+      }
+      &.country line {
+        stroke: $country-color;
+        stroke-dasharray: 2, 2;
+      }
+    }
+  }
+  text {
+    font-size: 18px;
+    font-weight: 400;
+    fill: $tick-label-color;
+  }
+  .bar {
+    fill: $distribution-color;
+    shape-rendering: geometricPrecision;
+  }
+  .actual-answer {
+    fill: $actual-color;
+    shape-rendering: geometricPrecision;
+  }
+  .country-answer {
+    fill: $country-color;
+    shape-rendering: geometricPrecision;
+  }
+}
+
+div.legend {
+  display: flex;
+  align-items: center;
+  .legend-actual {
+    fill: $actual-color;
+  }
+  .legend-user {
+    fill: #26747a;
+  }
+  .legend-country {
+    fill: #ff7f8a;
+  }
+  p.o-typography-lead--small {
+    margin: 0.3em 0 0.3em 7px;
+  }
+}
+$axis-color: #c3bcb0;
+$tick-label-color: #6b6e68;
+$distribution-color: #cec6b9;
+$user-color: #26747a;
+$actual-color: #09a25c;
+$country-color: #ff7f8a;
+
+svg.column-chart {
+  align-self: flex-start;
+  margin-top: 7px;
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: $axis-color;
+    stroke-width: 2;
+    shape-rendering: crispEdges;
+  }
+  .y.axis {
+    path {
+       stroke: none;
+     }
+    .tick line {
+      stroke-width: 1;
+      stroke-dasharray: 1, 2;
+    }
+  }
+  .x2.axis {
+    path {
+      stroke: none;
+    }
+    .tick {
+      line {
+        stroke-width: 2;
+      }
+      &.user line {
+        stroke: $user-color;
+        stroke-dasharray: 2, 2;
+      }
+      &.actual line {
+        stroke: $actual-color;
+        stroke-dasharray: 2, 2;
+      }
+      &.country line {
+        stroke: $country-color;
+        stroke-dasharray: 2, 2;
+      }
+    }
+  }
+  text {
+    font-size: 18px;
+    font-weight: 400;
+    fill: $tick-label-color;
+  }
+  .bar {
+    fill: $distribution-color;
+    shape-rendering: geometricPrecision;
+  }
+  .actual-answer {
+    fill: $actual-color;
+    shape-rendering: geometricPrecision;
+  }
+  .country-answer {
+    fill: $country-color;
+    shape-rendering: geometricPrecision;
+  }
+}
+
+div.legend {
+  display: flex;
+  align-items: center;
+  .legend-actual {
+    fill: $actual-color;
+  }
+  .legend-user {
+    fill: #26747a;
+  }
+  .legend-country {
+    fill: #ff7f8a;
+  }
+  p.o-typography-lead--small {
+    margin: 0.3em 0 0.3em 7px;
+  }
+}
