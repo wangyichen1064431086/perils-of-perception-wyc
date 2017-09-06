@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Range from '../question-imputs/range';
+import Range from '../question-inputs/range';
 import ColumnChart from '../question-outputs/column-chart';
 
 class Question extends Component {
@@ -157,7 +157,7 @@ class Question extends Component {
   }
 }
 
-Question.propTypes = {
+Question.propTypes = {//React has some built-in typechecking abilities.To run typechecking on the props for a component, you can assign the special propTypes property.
   questionId: React.PropTypes.number,
   questionIndex: React.PropTypes.number,
   active: React.PropTypes.bool,
