@@ -38,8 +38,8 @@ class Question extends Component {
     this.props.updateScore(questionValue);//该方法在index.js/class App中定义
 
     fetch(`${this.props.endpoint}/response/`, {
-      methods: 'POST',
-      header: {
+      method: 'POST',
+      headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({

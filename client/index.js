@@ -88,7 +88,7 @@ class App extends Component {
     .slice(2)
     .map((question, i) =>
       <Question 
-          key={quesiton.meta.qid}
+          key={question.meta.qid}
           questionId={question.id}
           questionIndex={i}
           active={i === this.state.activeQuestion}
@@ -144,3 +144,9 @@ class App extends Component {
     )
   }
 }
+
+App.propTypes = {
+  questions: React.PropTypes.array
+};
+
+ReactDOM.render(<App />, document.getElementById('react-container'));

@@ -27,7 +27,7 @@ class Overlay extends Component {
     event.preventDefault();
     this.props.setQuestions(this.state.value)//MARK:This is a func
 
-    this.modal.classList.add('animate-blur');
+    this.modal.classList.add('animate-blur');// MARK: this.modal就是当前HTMLElement：className含有overlay的这个这个最外层div
     this.modal.style.backgroundColor = 'rgba(51, 51, 51, 0)';
 
     setInterval(
@@ -49,7 +49,9 @@ class Overlay extends Component {
       </option>
     ));
 
-    return (
+    return (//When the ref attribute is used on an HTML element, the ref callback receives the current DOM element as its argument. For example, this code uses the ref callback to store a reference to a DOM node（ref回调函数接收当前HTML Element作为它的参数）:
+
+
       <div 
         ref={node => {this.modal = node;}}
         className={`overlay ${this.state.visibility}`.trim()}
