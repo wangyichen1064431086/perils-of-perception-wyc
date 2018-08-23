@@ -17,26 +17,7 @@
 	},
 	"title": "测验：你有多了解你的国家？",
 	"summary": "一份最新的跨国调查显示，中国民众并不太了解社会当前的状态，在全球认知排名上与印度名列倒数。我们把这份跨国调查制作成以下测验，通过7个题目看看你是否真实认识自己所处的社会。",
-	"byline": [
-	    { 
-	    	"name": "David Blood", 
-	    	"url": "https://www.ft.com/stream/authorsId/NTBmY2Q1M2ItNjVhOC00ZGRhLWE5MGEtNzgxMTc0ZDlhOWQ3-QXV0aG9ycw=="
-	    },
-    	{ 
-    		"name": "Ændrew Rininsland", 
-	    	"url": "https://www.ft.com/topics/authors/%C3%86ndrew_Rininsland" 
-	    }
-	    ,
-    	{ 
-    		"name": "史书华", 
-	    	"url": "http://www.ftchinese.com/search/%E5%8F%B2%E4%B9%A6%E5%8D%8E/relative_byline" 
-	    }
-	    ,
-    	{ 
-    		"name": "倪卫国", 
-	    	"url": "http://www.ftchinese.com" 
-	    }
-	],
+
 	"publishedDate": "2017年1月26日",
 	"relatedArticle": {
 		"text": "",

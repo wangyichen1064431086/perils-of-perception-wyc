@@ -158,7 +158,7 @@ gulp.task('clean', function() {
 gulp.task('build', gulp.series('clean', 'prod', gulp.parallel(
     'copy', 'build-pages', 'styles', 'webpack'), 'dev'));
 
-gulp.task('html', () => {
+gulp.task('deploy', () => {
   return gulp.src('.tmp/*.html')
     .pipe($.inlineSource())
     .pipe($.htmlmin({
@@ -167,5 +167,5 @@ gulp.task('html', () => {
       minifyJS: true,
       minifyCSS: true
     }))
-    .pipe(gulp.dest('.tmp'));
+    .pipe(gulp.dest('dist'));
 });

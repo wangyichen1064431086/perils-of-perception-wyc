@@ -50,6 +50,7 @@
   "dependencies": {
     "d3": "^3.5.17",
     "lodash": "^4.17.4",
+    "node-sass": "^4.9.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-faux-dom": "^3.0.0"
